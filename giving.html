@@ -506,6 +506,93 @@ img{display:block;max-width:100%}
   .footer-block{border-bottom:1px solid rgba(255,255,255,.22)}
   .page-hero h1{font-size:40px}
 }
+
+/* Powerful animated transitions */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(34px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+@keyframes glowPulse {
+  0%,100% { box-shadow:0 0 0 rgba(244,200,87,0); }
+  50% { box-shadow:0 0 30px rgba(244,200,87,.32); }
+}
+@keyframes goldShine {
+  0% { background-position:-200% center; }
+  100% { background-position:200% center; }
+}
+.topbar-inner, .menu, .hero-copy, .feature, .about-card, .service-card, .visit-card,
+.footer-card, .page-hero h1, .page-hero p, .subpage-panel, .give-box {
+  animation:fadeUp .9s ease both;
+}
+.feature:nth-child(1){animation-delay:.08s}
+.feature:nth-child(2){animation-delay:.18s}
+.feature:nth-child(3){animation-delay:.28s}
+.feature:nth-child(4){animation-delay:.38s}
+.about-card{animation-delay:.12s}
+.service-card{animation-delay:.24s}
+.visit-card{animation-delay:.36s}
+.footer-card{animation-delay:.18s}
+.subpage-panel:nth-child(1), .give-box:nth-child(1){animation-delay:.10s}
+.subpage-panel:nth-child(2), .give-box:nth-child(2){animation-delay:.22s}
+.give-box:nth-child(3){animation-delay:.34s}
+
+.big-title, .script, .year-line {
+  animation:fadeUp 1s ease both;
+}
+.script {
+  background:linear-gradient(90deg, var(--gold2), #fff1b8, var(--gold2));
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:fadeUp 1s ease both, goldShine 4s linear infinite;
+}
+.primary-btn, .whatsapp-btn {
+  animation:glowPulse 2.8s ease-in-out infinite;
+}
+.feature, .card, .subpage-panel, .give-box, .footer-card {
+  transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+.feature:hover, .card:hover, .subpage-panel:hover, .give-box:hover {
+  transform:translateY(-8px);
+  box-shadow:0 24px 55px rgba(7,28,73,.18);
+  border-color:rgba(215,163,32,.45);
+}
+.menu a {
+  transition:color .25s ease, transform .25s ease;
+}
+.menu a:hover {
+  transform:translateY(-2px);
+}
+.top-logo img {
+  transition:transform .35s ease;
+}
+.top-logo img:hover {
+  transform:scale(1.05) rotate(-2deg);
+}
+.cross {
+  filter:drop-shadow(0 0 22px rgba(244,200,87,.28));
+}
+.hero::after {
+  content:"";
+  position:absolute;
+  inset:-20%;
+  background:radial-gradient(circle at 20% 20%, rgba(244,200,87,.10), transparent 18%),
+             radial-gradient(circle at 80% 65%, rgba(255,255,255,.08), transparent 16%);
+  animation:fadeIn 1.2s ease both;
+  pointer-events:none;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation:none !important;
+    transition:none !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -537,6 +624,7 @@ img{display:block;max-width:100%}
         <a class="" href="index.html#about">ABOUT US</a>
         <a class="" href="sermons.html">SERMONS</a>
         <a class="" href="events.html">EVENTS</a>
+        <a class="" href="gallery.html">GALLERY</a>
         <a class="active" href="giving.html">GIVE</a>
         <a class="" href="index.html#contact">CONTACT</a>
       </div>
