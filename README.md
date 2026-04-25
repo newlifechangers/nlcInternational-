@@ -1,4 +1,4 @@
-[events.html](https://github.com/user-attachments/files/27082239/events.html)
-[gallery.html](https://github.com/user-attachments/files/27082240/gallery.html)[sermons.html](https://github.com/user-attachments/files/27082243/sermons.html)
-[index.html](https://github.com/user-attachments/files/27082242/index.html)
-[giving.html](https://github.com/user-attachments/files/27082241/giving.html)
+[gallery.html](https://github.com/user-attachments/files/27082370/gallery.html)
+[giving.html](https://github.com/user-attachments/files/27082371/giving.html)[events.html](https://github.com/user-attachments/files/27082376/events.html)
+[sermons.html](https://github.com/user-attachments/files/27082374/sermons.html)
+[index.html](https://github.com/user-attachments/files/27082373/index.html)
